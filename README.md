@@ -38,7 +38,7 @@ REST_FRAMEWORK = {
     ),
     'DEFAULT_THROTTLE_RATES': {
         '<scope>': '5/s',    # Normal limits (i.e 5 reqs per second). Update drf_apikey.throttling.APIKeyThrottle scope attr to the key you set here
-        '<sope_long>': '1000'    # Relates to monthly limits, should just be integer (i.e 1000 requests per month). Update drf_apikey.throttling.APIKeyThrottle scope_long attr to the key you set here
+        '<scope_long>': '1000'    # Relates to monthly limits, should just be integer (i.e 1000 requests per month). Update drf_apikey.throttling.APIKeyThrottle scope_long attr to the key you set here
     }
 }
 ```
