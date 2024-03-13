@@ -78,6 +78,6 @@ class APIKeyThrottle(SimpleRateThrottle):
                 raise NotImplementedError(f"{self.scope_long} was not found in self.THROTTLE_RATES")
             
             try:
-                return int(self.THROTTLE_RATES.get(self.scope_long).replace('/month', ''))
+                return int(self.THROTTLE_RATES.get(self.scope_long))
             except ValueError:
                 raise ValueError("scope_long must be an integer that corresponds to number of requests allowed a month.")
